@@ -1,7 +1,7 @@
 package com.bridgelabz;
 
 /*
-
+@desc: Linked List implementation for generics data type
  */
 public class LinkedList<T extends Comparable<T>> {
     public Node<T> head;
