@@ -61,5 +61,26 @@ public class LinkedList<T> {
         curr.next = newNode;
     }
 
+    // deletion of start node
+    public void deleteFirst() {
+        if (head == null) {
+            return;
+        }
+        head = head.next;
+    }
+
+    // deletion of last node
+    public void deleteLast(){
+        if(head == null){
+            return;
+        }
+        Node<T> temp = head;
+        while(temp.next != null){
+            temp = temp.next;
+        }
+
+        temp = null;
+    }
+
 
 }

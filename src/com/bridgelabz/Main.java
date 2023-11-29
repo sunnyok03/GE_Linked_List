@@ -29,5 +29,17 @@ public class Main {
         LinkedList<Integer>UC4 = new LinkedList<>(56);
         UC4.insertAtEnd(70);
         UC4.insertAtPosition(30,1);
+
+        // Ability to delete the first element in the LinkedList of sequence 56->30->70
+        LinkedList<Integer> UC5 = new LinkedList<>(56);
+        UC4.insertAtEnd(30);
+        UC4.insertAtEnd(70);
+        UC4.deleteFirst();
+
+        // Ability to delete the last element in the LinkedList of sequence 56->30->70
+        LinkedList<Integer> UC6 = new LinkedList<>(56);
+        UC4.insertAtEnd(30);
+        UC4.insertAtEnd(70);
+        UC4.deleteLast();
     }
 }
