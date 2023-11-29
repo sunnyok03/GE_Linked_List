@@ -32,14 +32,21 @@ public class Main {
 
         // Ability to delete the first element in the LinkedList of sequence 56->30->70
         LinkedList<Integer> UC5 = new LinkedList<>(56);
-        UC4.insertAtEnd(30);
-        UC4.insertAtEnd(70);
-        UC4.deleteFirst();
+        UC5.insertAtEnd(30);
+        UC5.insertAtEnd(70);
+        UC5.deleteFirst();
 
         // Ability to delete the last element in the LinkedList of sequence 56->30->70
         LinkedList<Integer> UC6 = new LinkedList<>(56);
-        UC4.insertAtEnd(30);
-        UC4.insertAtEnd(70);
-        UC4.deleteLast();
+        UC6.insertAtEnd(30);
+        UC6.insertAtEnd(70);
+        UC6.deleteLast();
+
+        //Ability to search LinkedList to find Node with value 30
+        LinkedList<Integer> UC7 = new LinkedList<>(56);
+        UC7.insertAtEnd(30);
+        UC7.insertAtEnd(70);
+        UC7.search(30);
+
     }
 }
