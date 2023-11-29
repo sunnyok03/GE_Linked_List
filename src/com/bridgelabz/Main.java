@@ -62,5 +62,10 @@ public class Main {
         UC9.delete(40);
         System.out.println(UC9.size());
 
+        //Ability to create Ordered LinkedList in ascending order of data entered in following sequence 56, 30, 40, and 70
+        LinkedList<Integer> UC10 = new LinkedList<>(56);
+        UC10.insertInOrder(30);
+        UC10.insertInOrder(40);
+        UC10.insertInOrder(70);
     }
 }
