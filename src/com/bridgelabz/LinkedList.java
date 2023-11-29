@@ -18,4 +18,22 @@ public class LinkedList<T> {
         this.head = newNode;
     }
 
+
+    // insertion at last
+    public void insertAtEnd(T data) {
+        Node<T> newNode = new Node<>(data);
+
+        if (head == null) {
+            head = newNode;
+            return;
+        }
+
+        Node<T> curr = head;
+        while (curr.next != null) {
+            curr = curr.next;
+        }
+
+        curr.next = newNode;
+    }
+
 }

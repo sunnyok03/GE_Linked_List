@@ -20,6 +20,9 @@ public class Main {
         UC2.insertAtStart(30);
         UC2.insertAtStart(56);
 
-    
+        //Ability to create Linked List by appending 30 and 70 to 56
+        LinkedList<Integer>UC3 = new LinkedList<>(56);
+        UC3.insertAtEnd(30);
+        UC3.insertAtEnd(70);
     }
 }
