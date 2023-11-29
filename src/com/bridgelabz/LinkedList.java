@@ -94,5 +94,36 @@ public class LinkedList<T> {
         return null;
     }
 
+    /*
+    @desc: finding size of the linked list
+    @params:
+    @return: int (size of the list)
+     */
+    public int size(){
+        int size = 0;
+        Node<T> temp = head;
+        while(temp != null){
+            size++;
+            temp = temp.next;
+        }
+        return size;
+    }
 
+    //delete node
+    public void delete(T data){
+        Node<T> temp = head;
+        Node<T> prev = head;
+        if(head.data == data){
+            head = head.next;
+            return;
+        }
+        while(temp != null){
+            prev = temp;
+            temp = temp.next;
+            if(temp != null && temp.data == data){
+                prev.next = temp.next;
+                return;
+            }
+        }
+    }
 }
