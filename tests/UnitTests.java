@@ -23,4 +23,14 @@ public class UnitTests {
         list.insertAtPosition(40,2);
         assertEquals(40, (int) list.search(30).next.data);
     }
+
+    @Test
+    public void size(){
+        LinkedList<Integer> list = new LinkedList<>(56);
+        list.insertAtEnd(30);
+        list.insertAtEnd(40);
+        list.insertAtEnd(70);
+        list.delete(40);
+        assertEquals(3, list.size());
+    }
 }

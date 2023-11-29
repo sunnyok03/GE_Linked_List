@@ -48,11 +48,24 @@ public class Main {
         UC7.insertAtEnd(70);
         Node<Integer> temp = UC7.search(30);
 
-        //Ability to insert 40 after 30 to the Linked List sequence of 56->30->70
+        // Ability to insert 40 after 30 to the Linked List sequence of 56->30->70
         LinkedList<Integer> UC8 = new LinkedList<>(56);
         UC8.insertAtEnd(30);
         UC8.insertAtEnd(70);
-        UC7.insertAtPosition(40,2);
+        UC8.insertAtPosition(40,2);
 
+        //Ability to delete 40 from the Linked List sequence of 56->30->40->70 and show the size of LinkedList is 3
+        LinkedList<Integer> UC9 = new LinkedList<>(56);
+        UC9.insertAtEnd(30);
+        UC9.insertAtEnd(40);
+        UC9.insertAtEnd(70);
+        UC9.delete(40);
+        System.out.println(UC9.size());
+
+        //Ability to create Ordered LinkedList in ascending order of data entered in following sequence 56, 30, 40, and 70
+        LinkedList<Integer> UC10 = new LinkedList<>(56);
+        UC10.insertInOrder(30);
+        UC10.insertInOrder(40);
+        UC10.insertInOrder(70);
     }
 }

@@ -3,7 +3,7 @@ package com.bridgelabz;
 /*
 
  */
-public class LinkedList<T> {
+public class LinkedList<T extends Comparable<T>> {
     public Node<T> head;
 
     public LinkedList(){}
@@ -94,5 +94,52 @@ public class LinkedList<T> {
         return null;
     }
 
+    /*
+    @desc: finding size of the linked list
+    @params:
+    @return: int (size of the list)
+     */
+    public int size(){
+        int size = 0;
+        Node<T> temp = head;
+        while(temp != null){
+            size++;
+            temp = temp.next;
+        }
+        return size;
+    }
 
+    //delete node
+    public void delete(T data){
+        Node<T> temp = head;
+        Node<T> prev = head;
+        if(head.data == data){
+            head = head.next;
+            return;
+        }
+        while(temp != null){
+            prev = temp;
+            temp = temp.next;
+            if(temp != null && temp.data == data){
+                prev.next = temp.next;
+                return;
+            }
+        }
+    }
+
+    // insert in ordered
+    public void insertInOrder(T data){
+        Node<T> newNode = new Node<T>(data);
+        if (head == null || data.compareTo(head.data) < 0) {
+            newNode.next = head;
+            head = newNode;
+        } else {
+            Node<T> current = head;
+            while (current.next != null && data.compareTo(current.next.data) > 0) {
+                current = current.next;
+            }
+            newNode.next = current.next;
+            current.next = newNode;
+        }
+    }
 }
