@@ -24,5 +24,10 @@ public class Main {
         LinkedList<Integer>UC3 = new LinkedList<>(56);
         UC3.insertAtEnd(30);
         UC3.insertAtEnd(70);
+
+        //Ability to insert 30 between 56 and 70
+        LinkedList<Integer>UC4 = new LinkedList<>(56);
+        UC4.insertAtEnd(70);
+        UC4.insertAtPosition(30,1);
     }
 }
