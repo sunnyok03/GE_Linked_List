@@ -46,7 +46,13 @@ public class Main {
         LinkedList<Integer> UC7 = new LinkedList<>(56);
         UC7.insertAtEnd(30);
         UC7.insertAtEnd(70);
-        UC7.search(30);
+        Node<Integer> temp = UC7.search(30);
+
+        //Ability to insert 40 after 30 to the Linked List sequence of 56->30->70
+        LinkedList<Integer> UC8 = new LinkedList<>(56);
+        UC8.insertAtEnd(30);
+        UC8.insertAtEnd(70);
+        UC7.insertAtPosition(40,2);
 
     }
 }
