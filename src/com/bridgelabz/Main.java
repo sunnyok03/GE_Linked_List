@@ -15,6 +15,11 @@ public class Main {
         first.next = second;
         second.next = third;
 
+        //Ability to create Linked list by adding 30 and 56 to 70
+        LinkedList<Integer>UC2 = new LinkedList<>(70);
+        UC2.insertAtStart(30);
+        UC2.insertAtStart(56);
 
+    
     }
 }
